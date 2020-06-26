@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Create Widget</string>
+    <string name="textView">Widget text</string>
+    <string name="radiobutton">Radio</string>
+    <string name="editText">Enter text</string>
+    <string name="radioBlue">Blue</string>
+    <string name="radioGreen">Green</string>
+    <string name="radioPink">Pink</string>
+    <string name="radioYellow">Yellow</string>
+    <string name="button">Save</string>
+</resources>
