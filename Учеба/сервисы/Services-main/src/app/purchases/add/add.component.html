@@ -1,0 +1,17 @@
+<form [formGroup]="addForm" (ngSubmit)="add()">
+    <div class="form-group">
+        <label for="FormControlName">Название</label>
+        <input type="text" class="form-control" id="FormControlName" formControlName="name">
+        <p *ngIf="addForm.controls['name'].invalid" class="red">Впиши наименование</p>
+      </div>
+      <div class="form-group">
+          <label for="FormControlAmount">Кол-во</label>
+          <input class="form-control" id="FormControlAmount" rows="3" formControlName="amount">
+          <p *ngIf="addForm.controls['amount'].invalid" class="red">Впиши кол-во</p>
+        </div>
+        
+  
+        <button [disabled]="addForm.invalid" class="btn btn-secondary">Добавить</button>
+        <p *ngIf="addForm.invalid">Заполни все!</p>  
+  
+</form>

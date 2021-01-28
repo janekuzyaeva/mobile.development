@@ -1,0 +1,28 @@
+<div class="container" *ngIf="currentPurchase">
+<form [formGroup]="editForm" (ngSubmit)="edit()">
+    <div class="form-group">
+        <label for="FormControlName">Название</label>
+        <input type="text" class="form-control" id="FormControlName" formControlName="name">
+        <p *ngIf="editForm.controls['name'].invalid" class="red">Впиши наименование</p>
+      </div>
+      <div class="form-group">
+          <label for="FormControlAmount">Кол-во</label>
+          <input class="form-control" id="FormControlAmount" rows="3" formControlName="amount">
+          <p *ngIf="editForm.controls['amount'].invalid" class="red">Впиши кол-во</p>
+        </div>
+        <div class="form-group">
+            <label for="FormControlState">Статус</label>
+            <select class="form-control" id="FormControlState" formControlName="state">
+                <option value="куплено">Куплено</option>
+                <option value="не куплено" >Не куплено</option>
+            </select>
+            <p *ngIf="editForm.controls['state'].invalid" class="red">Выбери статус</p>
+          </div>
+  
+        <button [disabled]="editForm.invalid" class="btn btn-secondary">Редактировать</button>
+        <p *ngIf="editForm.invalid">Заполни все!</p>  
+
+        <a class="btn btn-danger" (click)="onDelete()">Удалить</a> 
+  
+</form>
+</div>
